@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <bean id="userIO" class="main.com.sg.flooring.ui.UserIOConsoleImpl"/>
+
+    <bean id="floorView" class="main.com.sg.flooring.ui.FloorView">
+        <constructor-arg ref="userIO"/>
+    </bean>
+
+    <bean id="floorDAO"
+          class="main.com.sg.flooring.dao.FloorDAOImpl"/>
+
+    <bean id="service"
+          class="main.com.sg.flooring.service.FloorServiceImpl">
+        <constructor-arg ref="floorDAO"/>
+    </bean>
+
+    <bean id="controller"
+          class="main.com.sg.flooring.controller.FlooringMasteryController">
+        <constructor-arg ref="service"/>
+        <constructor-arg ref="floorView"/>
+    </bean>
+
+</beans>

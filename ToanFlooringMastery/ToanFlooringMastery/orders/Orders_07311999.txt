@@ -1,0 +1,8 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+14,Toan Failin,TX,6.00,Wood,100,6.00,6.00,600.00,600.00,72.00,1272.00
+14,Toan Failin,TX,6.00,Wood,100,6.00,6.00,600.00,600.00,72.00,1272.00
+0,IM GOING TO FAIL,TX,6.00,Wood,100,6.00,6.00,600.00,600.00,72.00,1272.00
+14,Toan Failin,TX,6.00,Wood,100,6.00,6.00,600.00,600.00,72.00,1272.00
+14,Toan Failin,TX,6.00,Wood,100,6.00,6.00,600.00,600.00,72.00,1272.00
+15,Toan Failin,TX,6.00,Wood,100,6.00,6.00,600.00,600.00,72.00,1272.00
+19,Toan Failing,TX,null,Wood,100,null,null,null,null,null,null
